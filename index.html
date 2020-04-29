@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+
+
+<body ng-app="app" ng-controller="neural">
+	
+	<div class="content">
+	
+		<div ng-repeat="x in board track by $index">
+			<div class="square" ng-class="{selected: y != 0}" ng-repeat="y in x track by $index" ng-mouseenter="changeValue($parent.$index,$index)" ng-init="count=0">
+			</div>
+		</div>
+		<button ng-click="learn()" 	  style="float:left" type="button" class="btn btn-success">Naucz</button>
+		<button ng-click="calculate()" style="float:right" type="button" class="btn btn-success">Wprowadź</button>
+		</div>
+	</div>
+	<div class="content">
+		<table class="table">
+			<tbody>
+				<tr ng-repeat="value in result track by $index">
+					<td>{{$index}}: {{value}}</td>
+				</tr>
+			
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>
+
+
+

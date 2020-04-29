@@ -1,0 +1,33 @@
+body {
+	background-color: 	#ffc;
+}	
+
+.content {
+	width: 				30%;
+	text-align:			center;
+	margin-left:		15%;
+	margin-top:			1%;
+	float: 				left;
+}
+
+
+.table-cell {
+    display:			table-cell;
+    vertical-align: 	middle;
+}
+
+.square {
+    float: 				left;
+    position:		 	relative;
+    width: 				15%;
+    padding-bottom: 	15%;
+    margin: 			1.66%;
+    background-color: 	#000;
+    overflow: 			hidden;
+	cursor:				pointer;
+}
+
+.selected {
+	background-color: 	#28a745;
+}
+
